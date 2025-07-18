@@ -11,7 +11,7 @@ spec:
     - name: source
   steps:
     - name: build
-      image: quay.io/buildah/stable:v1.24.0
+      image: quay.io/buildah/stable:v1.18.0
       command:
         - buildah
       args:
@@ -21,7 +21,7 @@ spec:
         - $(params.IMAGE)
         - $(workspaces.source.path)
     - name: push
-      image: quay.io/buildah/stable:v1.24.0
+      image: quay.io/buildah/stable:v1.18.0
       command:
         - buildah
       args:

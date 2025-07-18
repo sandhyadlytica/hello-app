@@ -1,10 +1,10 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  name: hello-app-pipelinerun
+  name: hello-tekton-pipeline
 spec:
   pipelineRef:
-    name: hello-app-pipeline
+    name: hello-tekton-pipeline
   params:
     - name: git-url
       value: https://github.com/sandhya/hello-tekton.git
