@@ -20,6 +20,8 @@ spec:
         - -t
         - $(params.IMAGE)
         - $(workspaces.source.path)
+      securityContext:
+        privileged: true
     - name: push
       image: quay.io/buildah/stable:v1.18.0
       command:
@@ -27,3 +29,5 @@ spec:
       args:
         - push
         - $(params.IMAGE)
+      securityContext:
+        privileged: true
