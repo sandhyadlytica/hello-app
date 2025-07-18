@@ -7,7 +7,7 @@ spec:
     name: hello-tekton-pipeline
   params:
     - name: git-url
-      value: https://github.com/sandhya/hello-tekton.git
+      value: https://github.com/sandhyadlytica/hello-app.git
     - name: git-revision
       value: main
     - name: image
