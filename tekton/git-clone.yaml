@@ -6,7 +6,7 @@ spec:
   params:
     - name: url
       type: string
-      description: The git repository URL
+      description: https://github.com/sandhyadlytica/hello-app.git 
     - name: revision
       type: string
       description: The git revision to checkout

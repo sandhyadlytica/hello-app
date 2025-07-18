@@ -1,19 +1,19 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  name: hello-tekton-pipelinerun
+  name: hello-app-pipelinerun
 spec:
   pipelineRef:
-    name: hello-tekton-pipeline
+    name: hello-app-pipeline
   params:
     - name: git-url
       value: https://github.com/sandhya/hello-tekton.git
     - name: git-revision
       value: main
     - name: image
-      value: image-registry.openshift-image-registry.svc:5000/your-project/hello-tekton:latest
+      value: docker.io/sandhyaa55/hello-app:latest
     - name: manifest-dir
-      value: /workspace/shared-workspace/k8s
+      value: k8s
   workspaces:
     - name: shared-workspace
       emptyDir: {}

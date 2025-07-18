@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-tekton
+  name: hello-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-tekton
+      app: hello-app
   template:
     metadata:
       labels:
-        app: hello-tekton
+        app: hello-app
     spec:
       containers:
-      - name: hello-tekton
-        image: image-registry.openshift-image-registry.svc:5000/saandhyaa123-dev/hello-tekton:latest
+      - name: hello-app
+        image: docker.io/sandhyaa55/hello-app:latest
         ports:
-        - containerPort: 3000
+         - containerPort: 3000
